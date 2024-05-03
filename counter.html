@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{background-color: grey;
+      height: 100vh;
+      display: flex;justify-content: center;align-items: center;
+    }
+    .pad{background-color: rgb(8, 127, 225);padding: 20px;border-radius: 10px;}
+    button{width: 74px;}
+    p{text-align: center;}
+    button:hover{border: 3px red solid;cursor: pointer;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="pad">
+      <p id="number"></p>
+      <button id="addBtn">Increase</button>
+      <button id="resetBtn">Reset</button>
+      <button id="subBtn">Decrease</button>
+    </div>
+  </div>
+  <script>
+    
+     
+    const add = document.getElementById("addBtn");
+    const sub = document.getElementById("subBtn");
+    const reset = document.getElementById("resetBtn");
+    let count = 0;
+   add.onclick = function(){
+count++;
+number.textContent=count;
+   }
+   sub.onclick = function(){
+    count--;
+    number.textContent=count;
+   }
+   reset.onclick = function(){
+    count=0;
+    number.textContent=count;
+   }
+   
+  </script>
+</body>
+</html>
